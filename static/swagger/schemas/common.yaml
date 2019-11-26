@@ -1,0 +1,31 @@
+DefaultResult :
+    type: "object"
+    properties:
+      status: 
+        type: "integer"
+        enum:
+          - 200
+      data: 
+        type: "integer"
+        enum: 
+          - 1
+      msg:
+        type: "string"
+        enum:
+          - ""
+
+PagingObject:
+  type: "object"
+  properties:
+    offset:
+      type: "integer"
+      enum: 
+        - 0
+    size:
+      type: "integer"
+      enum: 
+        - 10
+    total:
+      type: "integer"
+      enum: 
+        - 200

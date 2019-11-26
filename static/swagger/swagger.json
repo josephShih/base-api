@@ -1,0 +1,36 @@
+swagger: "2.0"
+info:
+  description: "resume consulting api 文件說明"
+  version: "1.0.0"
+  title: "Star API"
+  termsOfService: "http://star.104.com.tw"
+  contact:
+    email: "star@104.com.tw"
+  license:
+    name: ""
+    url: ""
+host: "api.star.104dc-dev.com"
+# local:  local.star.104-dev.com.tw
+# dev:  api.star.104dc-dev.com
+basePath: "/api"
+tags:
+- name: "admin"
+  description: "後台Log紀錄"
+- name: "doll"
+  description: ""
+- name: "giver"
+  description: ""
+
+schemes:
+- "http"
+paths:
+  /doll:
+    $ref: "./paths/getSingleDoll.yaml"
+
+definitions:
+  DefaultResult :
+    $ref: "./schemas/common.yaml#/DefaultResult"
+
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
