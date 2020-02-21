@@ -6,8 +6,8 @@ export default function configure(server) {
   if (config.DEBUG) {
     server.use(
       morgan('tiny', {
-        skip,
-      }),
+        skip
+      })
     )
   }
 }

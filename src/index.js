@@ -30,7 +30,7 @@ if (cluster.isMaster) {
 
   cluster.on('exit', (worker, code, signal) => {
     log.info(
-      `worker ${worker.process.pid} died, code: ${code}, signal: ${signal}`,
+      `worker ${worker.process.pid} died, code: ${code}, signal: ${signal}`
     )
   })
 } else {

@@ -1,0 +1,17 @@
+{
+  "files.eol": "\n",
+  "eslint.enable": true,
+  "editor.formatOnSave": false,
+  "eslint.autoFixOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 400,
+  "prettier.proseWrap": "never",
+  "codemetrics.basics.ComplexityLevelNormal": 10,
+  "codemetrics.basics.ComplexityLevelHigh": 20,
+  "codemetrics.basics.ComplexityLevelExtreme": 30,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

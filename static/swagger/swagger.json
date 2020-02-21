@@ -1,35 +1,37 @@
-swagger: "2.0"
+openapi: "3.0.0"
 info:
-  description: "resume consulting api 文件說明"
-  version: "1.0.0"
-  title: "Star API"
-  termsOfService: "http://star.104.com.tw"
+  description: "resume clinic api document"
+  version: "1.0"
+  title: "Resume Clinic API"
+  termsOfService: "https://student.star.104-dev.com.tw/"
   contact:
-    email: "star@104.com.tw"
+    email: ""
   license:
     name: ""
     url: ""
-host: "api.star.104dc-dev.com"
-# local:  local.star.104-dev.com.tw
-# dev:  api.star.104dc-dev.com
-basePath: "/api"
+
 tags:
-- name: "admin"
-  description: "後台Log紀錄"
-- name: "doll"
-  description: ""
-- name: "giver"
-  description: ""
+- name: "common"
+  description: "共用 API"
 
-schemes:
-- "http"
+servers:
+- url: "/api/{version}"
+  description: ""
+  variables:
+    version:
+      default: '1.0'    
+      enum:
+        - ''
+        - '1.0'
+ 
 paths:
-  /doll:
-    $ref: "./paths/getSingleDoll.yaml"
+  /version:
+    $ref: "paths/getApiVersion.yaml"
 
-definitions:
-  DefaultResult :
-    $ref: "./schemas/common.yaml#/DefaultResult"
+components:
+  schemas:
+    DefaultResult :
+      $ref: "schemas/common.yaml#/DefaultResult"
 
 externalDocs:
   description: "Find out more about Swagger"

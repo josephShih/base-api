@@ -1,18 +1,24 @@
 DefaultResult :
-    type: "object"
-    properties:
-      status: 
-        type: "integer"
-        enum:
-          - 200
-      data: 
-        type: "integer"
-        enum: 
-          - 1
-      msg:
-        type: "string"
-        enum:
-          - ""
+  type: "object"
+  properties:
+    status: 
+      type: "integer"
+      example: 200
+    data: 
+      type: "integer"
+      example: []
+
+DefaultFailureResult :
+  type: "object"
+  properties:
+    status: 
+      type: "integer"
+      enum:
+        - 403
+    error: 
+      type: "string"
+      enum:
+        - "errorMessage"
 
 PagingObject:
   type: "object"
@@ -29,3 +35,17 @@ PagingObject:
       type: "integer"
       enum: 
         - 200
+        
+VersionResult :
+  type: "object"
+  properties:
+    status: 
+      type: "integer"
+      format: int64
+      example: 200
+    data: 
+      type: "object"
+      properties:
+        version:
+          type: "String"
+          example: "1.0"

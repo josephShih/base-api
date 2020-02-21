@@ -15,21 +15,21 @@ const transports = [
   new DailyRotateFile({
     dirname: logDirectory,
     filename: 'server.log',
-    maxFiles: 7,
-  }),
+    maxFiles: 7
+  })
 ]
 
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.json(),
-  transports,
+  transports
 })
 
 if (config.DEBUG) {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
+      format: winston.format.simple()
+    })
   )
 }
 
