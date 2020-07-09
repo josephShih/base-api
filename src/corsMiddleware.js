@@ -1,4 +1,4 @@
-export default function setup(server) {
+export default function setup (server) {
   server.use((req, res, next) => {
     const allowedOrigins = ['http://api.student.104dc-dev.com']
     const origin = req.headers.origin

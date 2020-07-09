@@ -2,7 +2,6 @@
   "files.eol": "\n",
   "eslint.enable": true,
   "editor.formatOnSave": false,
-  "eslint.autoFixOnSave": true,
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.tabWidth": 2,

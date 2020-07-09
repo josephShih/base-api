@@ -3,7 +3,7 @@ module.exports = {
   verbose: true,
   clearMocks: true,
   transform: {
-    '^.+\\.js$': 'babel-jest',
+    '^.+\\.js$': 'babel-jest'
   },
   moduleDirectories: ['node_modules', '.'],
   testMatch: ['**/src/**/?(*.)+(spec|test).js'],
@@ -16,10 +16,8 @@ module.exports = {
     '/static/',
     '/docs/',
     '/bin/',
-    '/tests/',
+    '/tests/'
   ],
   coverageDirectory: 'report/coverage',
-  collectCoverageFrom: [
-    '<rootDir>/src/**/*.js',
-  ],
+  collectCoverageFrom: ['<rootDir>/src/**/*.js']
 }

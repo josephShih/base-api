@@ -1,0 +1,9 @@
+node_modules
+tests
+build
+bin
+static
+config
+doc
+logs
+report

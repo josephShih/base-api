@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "version": "1.0.0",
+    "title": "專案初始",
+    "termsOfService": "http://init.104.com.tw/",
+    "contact": {
+      "email": "init@104.com.tw"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://init.104-dev.com.tw/{basePath}",
+      "variables": {
+        "basePath": {
+          "enum": [
+            "api",
+            "api/v1.0"
+          ],
+          "default": "api/v1.0"
+        }
+      }
+    },
+    {
+      "url": "https://local.init.104-dev.com.tw/{basePath}",
+      "variables": {
+        "basePath": {
+          "enum": [
+            "api",
+            "api/v1.0"
+          ],
+          "default": "api/v1.0",
+          "description": "api 檢查目前最新(/version) 使用, 其他接口使用api/vx.x"
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "api",
+      "description": "初始化 api"
+    }
+  ],
+  "paths": {
+    "/version": {
+      "get": {
+        "tags": [
+          "common"
+        ],
+        "summary": "取得 API 最新版本號, 使用 /api 接口不用帶版號",
+        "description": "取得 API 最新版本號",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "VersionResult": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "type": "string",
+                "example": "1.0"
+              }
+            }
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}

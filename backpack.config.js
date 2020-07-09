@@ -3,20 +3,20 @@
 module.exports = {
   webpack: (original, options, webpack) => {
     const config = {
-      ...original,
+      ...original
     }
     config.module.rules.push({
       test: /\.(sql)$/,
       exclude: /node_modules/,
-      loader: 'raw-loader',
+      loader: 'raw-loader'
     })
     config.plugins.push(
       new webpack.EnvironmentPlugin({
         NODE_ENV: 'development',
         DEBUG: false,
-        BABEL_DISABLE_CACHE: 1,
-      }),
+        BABEL_DISABLE_CACHE: 1
+      })
     )
     return config
-  },
+  }
 }
