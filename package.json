@@ -34,7 +34,7 @@
     "prettier": "2.0.5",
     "prettier-eslint-cli": "^5.0.0",
     "quick-lru": "4.0.1",
-    "raw-loader": "4.0.0",
+    "raw-loader": "4.0.2",
     "rimraf": "^3.0.0"
   },
   "dependencies": {
